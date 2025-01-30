@@ -15,7 +15,7 @@ function App() {
     <Router>
       <div className="min-h-screen bg-gray-100">
         {/* Хедер теперь тут */}
-        <header className="flex justify-between items-center p-4 bg-zinc-900 shadow-md text-white">
+        <header className="flex justify-between items-center p-4 bg-zinc-800 shadow-md text-white">
           <div className="flex items-center space-x-2">
             <span className="text-xl font-bold">🛡️ Gorilla Armor</span>
           </div>
