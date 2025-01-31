@@ -14,7 +14,7 @@ const HelmetsCarousel = () => {
   return (
     <Swiper slidesPerView={3} spaceBetween={20} pagination={{ clickable: true }} modules={[Pagination]}>
       {helmets.map((helmet, index) => (
-        <SwiperSlide key={index} className="flex justify-center !px-0 !mx-0">
+        <SwiperSlide key={index} className="flex justify-center !px-0 !mx-7">
           <img src={helmet.src} alt={helmet.alt} className="rounded-lg shadow-lg max-w-[250px] max-h-[250px]" />
         </SwiperSlide>
       ))}

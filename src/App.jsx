@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { Search, User, ShoppingBag } from "lucide-react"; // Import the icons
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contacts from "./pages/Contacts";
@@ -10,14 +11,30 @@ import Product from "./pages/Product";
 import Checkout from "./pages/Checkout";
 import OrderConfirmation from "./pages/OrderConfirmation";
 
+// IconBar component
+const IconBar = () => {
+  return (
+    <div className="flex space-x-4">
+      <Search className="text-gray-400 w-6 h-6 hover:text-white transition" />
+
+      <Link to="/account">
+        <User className="text-gray-400 w-6 h-6 hover:text-white transition" />
+      </Link>
+      <Link to="/cart">
+        <ShoppingBag className="text-gray-400 w-6 h-6 hover:text-white transition" />
+      </Link>
+    </div>
+  );
+};
+
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-100">
-        {/* Хедер теперь тут */}
-        <header className="flex justify-between items-center p-4 bg-zinc-800 shadow-md text-white">
+      <div className="px-10 p-4 min-h-screen bg-BG">
+        {/* Header */}
+        <header className="flex justify-between items-center p-4 bg-BG shadow-md text-FC">
           <div className="flex items-center space-x-2">
-            <span className="text-xl font-bold">🛡️ Gorilla Armor</span>
+            <span className="text-xl font-medium">🛡️ Gorilla Armor</span>
           </div>
           <nav className="space-x-10">
             <Link to="/" className="hover:text-gray-400">Home</Link>
@@ -25,15 +42,13 @@ function App() {
             <Link to="/contacts" className="hover:text-gray-400">Contacts</Link>
             <Link to="/faq" className="hover:text-gray-400">FAQ</Link>
           </nav>
-          <div className="flex space-x-4">
-            <Link to="/account">👤</Link>
-            <Link to="/cart">🛒</Link>
-          </div>
+
+          {/* Right side of header */}
+          <IconBar /> {/* This is where the IconBar is inserted */}
         </header>
 
-        {/* Контент страниц */}
-        <div className="p-0
-      ">
+        {/* Page Content */}
+        <div className="p-0">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -51,6 +66,5 @@ function App() {
     </Router>
   );
 }
-
 
 export default App;
