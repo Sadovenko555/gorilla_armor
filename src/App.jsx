@@ -29,10 +29,10 @@ const IconBar = () => {
 
 function App() {
   // Определяем базовый путь в зависимости от среды
-  const basename = process.env.NODE_ENV === 'production' ? '/gorilla_armor/' : '';
+  
 
   return (
-    <Router basename={basename}> {/* Указываем базовый путь для продакшн-среды */}
+    <Router basename="/gorilla_armor"> {/* Указываем базовый путь */}
       <div className="px-0">
         {/* Header */}
         <header className="flex justify-between items-center p-4 pl-10 pr-10 bg-head shadow-md text-FC">
