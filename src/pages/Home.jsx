@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import HelmetsCarousel from "../components/HelmetsCarousel";
-import herofoto from "/assets/hero-image.jpg";
+import herofoto from "/docs/assets/hero-image.jpg";
 
 const Home = () => {
   return (
