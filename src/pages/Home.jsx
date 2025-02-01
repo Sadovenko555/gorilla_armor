@@ -3,7 +3,7 @@ import HelmetsCarousel from "../components/HelmetsCarousel";
 
 const Home = () => {
   return (
-    <div className="bg-BG text-FC ">
+    <div className="bg-BG text-FC pl-10 pr-10 ">
       {/* Hero Section */}
       <section className="flex flex-col md:flex-row items-center justify-between p-8">
         <div className="md:w-1/2 text-center md:text-left">
@@ -20,58 +20,51 @@ const Home = () => {
         </div>
       </section>
 
+      <section className="bg-BG text-white p-6 mt-6">    
+  <div className="container mx-auto  grid grid-cols-1 md:grid-cols-3 gap-6 ">
+    {/* Shipping */}
+    <div className="flex items-center space-x-4 p-4 bg-head rounded-lg">
+      <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 10h11M9 21V3m11 7h-4m-4 4h8m0 0v4m0-4l-4-4" />
+      </svg>
+      <div>
+        <h3 className="font-bold text-lg">Fast Worldwide Shipping</h3>
+        <p className="text-sm text-gray-400">Delivering orders across Europe and the USA</p>
+      </div>
+    </div>
+
+    {/* Guarantee */}
+    <div className="flex items-center space-x-4 p-4 bg-head rounded-lg">
+      <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 8c-4.418 0-8 2.686-8 6 0 2.347 1.563 4.351 3.76 5.395M16 4c-4.418 0-8 2.686-8 6 0 2.347 1.563 4.351 3.76 5.395M12 12v.01" />
+      </svg>
+      <div>
+        <h3 className="font-bold text-lg">100% Money-Back Guarantee</h3>
+        <p className="text-sm text-gray-400">Full refund if the product doesn’t fit your needs</p>
+      </div>
+    </div>
+
+    {/* Support 24/7 */}
+    <div className="flex items-center space-x-4 p-4 bg-head rounded-lg">
+      <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6l4 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      <div>
+        <h3 className="font-bold text-lg">24/7 Customer Support</h3>
+        <p className="text-sm text-gray-400">We’re always here to help, any time, any day</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
       {/* Carousel Section */}
       <section className="p-12">
         <h2 className="text-2xl font-bold text-center mb-4 p-8">New Products</h2>
         <HelmetsCarousel />
       </section>
 
-      {/* Footer */}
-      <footer className="bg-[#0D0D0F] text-[#F3EEE8] p-12">
-      <div className="container mx-auto flex flex-col md:flex-row justify-between items-start">
-        
-        {/* Logo Section */}
-        <div className="mb-6 md:mb-0">
-          <img src="/assets/logo.png" alt="Near You" className="h-16" />
-        </div>
-
-        {/* Useful Links */}
-        <div className="mb-6 md:mb-0">
-          <h3 className="font-bold mb-2">Useful Links</h3>
-          <ul className="space-y-1 text-gray-400">
-            <li><a href="/about" className="hover:text-white">About Us</a></li>
-            <li><a href="/contacts" className="hover:text-white">Contacts</a></li>
-            <li><a href="/products" className="hover:text-white">Our Products</a></li>
-            <li><a href="/privacy-policy" className="hover:text-white">Privacy Policy</a></li>
-            <li><a href="/return-policy" className="hover:text-white">Return Policy</a></li>
-            <li><a href="/terms" className="hover:text-white">Terms & Conditions</a></li>
-            <li><a href="/shipping" className="hover:text-white">Shipping</a></li>
-          </ul>
-        </div>
-
-        {/* User Section */}
-        <div>
-          <h3 className="font-bold mb-2">User</h3>
-          <ul className="space-y-1 text-gray-400">
-            <li><a href="/account" className="hover:text-white">My Account</a></li>
-            <li><a href="/orders" className="hover:text-white">My Orders</a></li>
-          </ul>
-        </div>
-      </div>
-
-      {/* Copyright */}
-      <div className="text-left text-gray-500 mt-6">
-        © 2025 - Powered by Oblagon.
-      </div>
-
-      {/* Scroll to Top Button */}
-      <button 
-        className="fixed bottom-6 right-6 bg-gray-700 p-3 rounded-md text-white hover:bg-gray-600 transition"
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-      >
-        ↑
-      </button>
-    </footer>
+      
     </div>
   );
 };

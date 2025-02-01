@@ -4,8 +4,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        BG: '#0D0D0F', 
-        FC:  '#EBEBEB', 
+        BG: '#1C1C1C', 
+        FC:  '#EBEBEB',
+        head:  '#2B2B2B', 
       },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],

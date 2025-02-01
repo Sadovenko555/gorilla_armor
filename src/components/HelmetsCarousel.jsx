@@ -8,13 +8,17 @@ const helmets = [
   { src: "/assets/helm2.jpg", alt: "Helm 2" },
   { src: "/assets/helm3.jpg", alt: "Helm 3" },
   { src: "/assets/helm4.jpg", alt: "Helm 4" },
+  { src: "/assets/helm1.jpg", alt: "Helm 5" },
+  { src: "/assets/helm2.jpg", alt: "Helm 5" },
+  { src: "/assets/helm3.jpg", alt: "Helm 7" },
+  { src: "/assets/helm4.jpg", alt: "Helm 8" },
 ];
 
 const HelmetsCarousel = () => {
   return (
-    <Swiper slidesPerView={3} spaceBetween={20} pagination={{ clickable: true }} modules={[Pagination]}>
+    <Swiper slidesPerView={4} spaceBetween={20} pagination={{ clickable: true }} modules={[Pagination]}>
       {helmets.map((helmet, index) => (
-        <SwiperSlide key={index} className="flex justify-center !px-0 !mx-7">
+        <SwiperSlide key={index} className="flex justify-center !px-0 !mx-4">
           <img src={helmet.src} alt={helmet.alt} className="rounded-lg shadow-lg max-w-[250px] max-h-[250px]" />
         </SwiperSlide>
       ))}
