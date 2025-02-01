@@ -16,7 +16,7 @@ const Home = () => {
           </Link>
         </div>
         <div className="md:w-2/5">
-          <img src="/assets/hero-image.jpg" alt="Armor" className="rounded-lg"/>
+          <img src="/dist/assets/hero-image.jpg" alt="Armor" className="rounded-lg"/>
         </div>
       </section>
 
