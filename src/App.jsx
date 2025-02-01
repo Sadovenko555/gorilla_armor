@@ -11,6 +11,10 @@ import Product from "./pages/Product";
 import Checkout from "./pages/Checkout";
 import OrderConfirmation from "./pages/OrderConfirmation";
 
+
+
+
+
 // IconBar component
 const IconBar = () => {
   return (

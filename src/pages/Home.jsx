@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import HelmetsCarousel from "../components/HelmetsCarousel";
+import herofoto from "/assets/hero-image.jpg";
 
 const Home = () => {
   return (
@@ -16,7 +17,7 @@ const Home = () => {
           </Link>
         </div>
         <div className="md:w-2/5">
-          <img src="/assets/hero-image.jpg" alt="Armor" className="rounded-lg"/>
+          <img src={herofoto} alt="Armor" className="rounded-lg"/>
         </div>
       </section>
 
