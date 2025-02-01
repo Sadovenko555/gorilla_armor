@@ -5,4 +5,7 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   base: '/gorilla_armor/', // Заменить на реальное имя репозитория
+  build: {
+    outDir: 'docs',
+  },
 });
