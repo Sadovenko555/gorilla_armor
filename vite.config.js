@@ -5,4 +5,11 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   base: '/gorilla_armor/', // Убираем для локальной разработки
+  build: {
+    rollupOptions: {
+      output: {
+        assetFileNames: '[name].[ext]', // Без хеша
+      },
+    },
+  },
 });
