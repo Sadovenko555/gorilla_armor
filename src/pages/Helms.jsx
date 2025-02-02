@@ -3,7 +3,6 @@ import card1 from "/dist/assets/p_card1.jpg";
 import card2 from "/dist/assets/p_card2.jpg";
 import card3 from "/dist/assets/p_card3.jpg";
 import card4 from "/dist/assets/p_card4.jpg";
-
 const helms = [
   {
     id: 1,
@@ -34,7 +33,6 @@ const helms = [
     image: card4,
   },
 ];
-
 const Helms = () => {
   return (
     <div className="min-h-screen bg-BG text-gray-100 p-8">
@@ -65,5 +63,4 @@ const Helms = () => {
     </div>
   );
 };
-
 export default Helms;
