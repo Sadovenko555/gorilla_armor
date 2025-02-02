@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import card1 from "/dist/assets/p_card1.jpg";
-import card2 from "/dist/assets/p_card2.jpg";
-import card3 from "/dist/assets/p_card3.jpg";
-import card4 from "/dist/assets/p_card4.jpg";
+import card1 from "/assets/p_card1.jpg";
+import card2 from "/assets/p_card2.jpg";
+import card3 from "/assets/p_card3.jpg";
+import card4 from "/assets/p_card4.jpg";
 const helms = [
   {
     id: 1,

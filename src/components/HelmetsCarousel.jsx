@@ -2,10 +2,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
-import helm1 from "/dist/assets/helm1.jpg";
-import helm2 from "/dist/assets/helm2.jpg";
-import helm3 from "/dist/assets/helm3.jpg";
-import helm4 from "/dist/assets/helm4.jpg";
+import helm1 from "/assets/helm1.jpg";
+import helm2 from "/assets/helm2.jpg";
+import helm3 from "/assets/helm3.jpg";
+import helm4 from "/assets/helm4.jpg";
 
 const helmets = [
   { src: helm1, alt: "Helm 1" },

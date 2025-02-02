@@ -10,7 +10,7 @@ import Helms from "./pages/Helms";
 import Product from "./pages/Product";
 import Checkout from "./pages/Checkout";
 import OrderConfirmation from "./pages/OrderConfirmation";
-import logo from "/dist/assets/logo.png";
+import logo from "/assets/logo.png";
 
 
 
