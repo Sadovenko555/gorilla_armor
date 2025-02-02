@@ -2,16 +2,20 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
+import helm1 from "/dist/assets/helm1.jpg";
+import helm2 from "/dist/assets/helm2.jpg";
+import helm3 from "/dist/assets/helm3.jpg";
+import helm4 from "/dist/assets/helm4.jpg";
 
 const helmets = [
-  { src: "/assets/helm1.jpg", alt: "Helm 1" },
-  { src: "/assets/helm2.jpg", alt: "Helm 2" },
-  { src: "/assets/helm3.jpg", alt: "Helm 3" },
-  { src: "/assets/helm4.jpg", alt: "Helm 4" },
-  { src: "/assets/helm1.jpg", alt: "Helm 5" },
-  { src: "/assets/helm2.jpg", alt: "Helm 5" },
-  { src: "/assets/helm3.jpg", alt: "Helm 7" },
-  { src: "/assets/helm4.jpg", alt: "Helm 8" },
+  { src: helm1, alt: "Helm 1" },
+  { src: helm2, alt: "Helm 2" },
+  { src: helm3, alt: "Helm 3" },
+  { src: helm4, alt: "Helm 4" },
+  { src: helm1, alt: "Helm 1" },
+  { src: helm2, alt: "Helm 2" },
+  { src: helm3, alt: "Helm 3" },
+  { src: helm4, alt: "Helm 4" },
 ];
 
 const HelmetsCarousel = () => {

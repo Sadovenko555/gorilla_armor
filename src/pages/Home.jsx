@@ -12,7 +12,7 @@ const Home = () => {
           <p className="mt-4 text-gray-400">
             We create true masterpieces of medieval armors that reflect the best traditions of the past and meet modern quality standards.
           </p>
-          <Link to="/helms" className="mt-6 inline-block bg-red-600 px-6 py-2 rounded-lg hover:bg-red-700">
+          <Link to="/helms" className="mt-6 inline-block bg-red-800 px-6 py-2 rounded-lg hover:bg-red-700">
             View products
           </Link>
         </div>

@@ -10,6 +10,7 @@ import Helms from "./pages/Helms";
 import Product from "./pages/Product";
 import Checkout from "./pages/Checkout";
 import OrderConfirmation from "./pages/OrderConfirmation";
+import logo from "/dist/assets/logo.png";
 
 
 
@@ -41,11 +42,12 @@ function App() {
         {/* Header */}
         <header className="flex justify-between items-center p-4 pl-10 pr-10 bg-head shadow-md text-FC">
           <div className="flex items-center gap-4">
-            <img src="/assets/logo.png" alt="Gorilla Armor Logo" className="h-10 w-auto" />
+            <img src={logo} alt="Gorilla Armor Logo" className="h-10 w-auto" />
             <span className="text-xl font-medium">Gorilla Armor Shop</span>
           </div>
           <nav className="space-x-10">
             <Link to="/" className="hover:text-gray-400 transition">Home</Link>
+            <Link to="/helms" className="hover:text-gray-400 transition">Helms</Link>
             <Link to="/about" className="hover:text-gray-400 transition">About Us</Link>
             <Link to="/contacts" className="hover:text-gray-400 transition">Contacts</Link>
             <Link to="/faq" className="hover:text-gray-400 transition">FAQ</Link>
@@ -73,25 +75,23 @@ function App() {
 
         {/* Footer */}
         <footer className="bg-head text-[#F3EEE8] p-12">
-          <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start">
             {/* Logo Section */}
-            <div className="mb-6 md:mb-0">
-              <img src="/assets/logo.png" alt="Near You" className="h-16" />
-            </div>
+           
 
             {/* Useful Links */}
-            <div className="mb-6 md:mb-0 ml-80">
-              <h3 className="font-bold mb-2">Useful Links</h3>
-              <ul className="space-y-1 text-gray-400">
-                <li><a href="/about" className="hover:text-white transition">About Us</a></li>
-                <li><a href="/contacts" className="hover:text-white transition">Contacts</a></li>
-                <li><a href="/products" className="hover:text-white transition">Our Products</a></li>
-                <li><a href="/privacy-policy" className="hover:text-white transition">Privacy Policy</a></li>
-                <li><a href="/return-policy" className="hover:text-white transition">Return Policy</a></li>
-                <li><a href="/terms" className="hover:text-white transition">Terms & Conditions</a></li>
-                <li><a href="/shipping" className="hover:text-white transition">Shipping</a></li>
-              </ul>
-            </div>
+            <div className="mb-6 md:mb-0 pr-20">
+    <h3 className="font-bold mb-2">Useful Links</h3>
+    <ul className="space-y-1 text-gray-400">
+      <li><a href="/about" className="hover:text-white transition">About Us</a></li>
+      <li><a href="/contacts" className="hover:text-white transition">Contacts</a></li>
+      <li><a href="/products" className="hover:text-white transition">Our Products</a></li>
+      <li><a href="/privacy-policy" className="hover:text-white transition">Privacy Policy</a></li>
+      <li><a href="/return-policy" className="hover:text-white transition">Return Policy</a></li>
+      <li><a href="/terms" className="hover:text-white transition">Terms & Conditions</a></li>
+      <li><a href="/shipping" className="hover:text-white transition">Shipping</a></li>
+    </ul>
+  </div>
 
             {/* User Section */}
             <div >
