@@ -90,13 +90,13 @@ function App() {
       <div>
         <h3 className="font-bold mb-2">Useful Links</h3>
         <ul className="space-y-1 text-gray-400">
-          <li><a href="/about" className="hover:text-white transition">About Us</a></li>
-          <li><a href="/contacts" className="hover:text-white transition">Contacts</a></li>
-          <li><a href="/helms" className="hover:text-white transition">Our products</a></li>
-          <li><a href="/privacy-policy" className="hover:text-white transition">Privacy Policy</a></li>
-          <li><a href="/return-policy" className="hover:text-white transition">Return Policy</a></li>
-          <li><a href="/terms" className="hover:text-white transition">Terms & Conditions</a></li>
-          <li><a href="/shipping" className="hover:text-white transition">Shipping</a></li>
+          <li><a href="/gorilla_armor/about" className="hover:text-white transition">About Us</a></li>
+          <li><a href="/gorilla_armor/contacts" className="hover:text-white transition">Contacts</a></li>
+          <li><a href="/gorilla_armor/helms" className="hover:text-white transition">Our products</a></li>
+          <li><a href="/gorilla_armor/privacy-policy" className="hover:text-white transition">Privacy Policy</a></li>
+          <li><a href="/gorilla_armor/return-policy" className="hover:text-white transition">Return Policy</a></li>
+          <li><a href="/gorilla_armor/terms" className="hover:text-white transition">Terms & Conditions</a></li>
+          <li><a href="/gorilla_armor/shipping" className="hover:text-white transition">Shipping</a></li>
         </ul>
       </div>
 
@@ -104,8 +104,8 @@ function App() {
       <div>
         <h3 className="font-bold mb-2">User</h3>
         <ul className="space-y-1 text-gray-400">
-          <li><a href="/account" className="hover:text-white transition">My account</a></li>
-          <li><a href="/orders" className="hover:text-white transition">My orders</a></li>
+          <li><a href="/gorilla_armor/account" className="hover:text-white transition">My account</a></li>
+          <li><a href="/gorilla_armor/orders" className="hover:text-white transition">My orders</a></li>
         </ul>
       </div>
     </div>
