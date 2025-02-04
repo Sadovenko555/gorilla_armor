@@ -10,7 +10,8 @@ import Helms from "./pages/Helms";
 import Product from "./pages/Product";
 import Checkout from "./pages/Checkout";
 import OrderConfirmation from "./pages/OrderConfirmation";
-import logo from "/assets/logo.png";
+import logo from "/assets/logo1.png";
+
 
 
 
@@ -41,21 +42,23 @@ function App() {
       <div className="px-0">
         {/* Header */}
         <header className="flex justify-between items-center p-4 pl-10 pr-10 bg-head shadow-md text-FC">
-          <div className="flex items-center gap-4">
-            <img src={logo} alt="Gorilla Armor Logo" className="h-10 w-auto" />
-            <span className="text-xl font-medium">Gorilla Armor Shop</span>
-          </div>
-          <nav className="space-x-10">
-            <Link to="/" className="hover:text-gray-400 transition">Home</Link>
-            <Link to="/helms" className="hover:text-gray-400 transition">Helms</Link>
-            <Link to="/about" className="hover:text-gray-400 transition">About Us</Link>
-            <Link to="/contacts" className="hover:text-gray-400 transition">Contacts</Link>
-            <Link to="/faq" className="hover:text-gray-400 transition">FAQ</Link>
-          </nav>
+  <div className="flex items-center gap-4">
+    <Link to="/" className="flex items-center gap-4">
+      <img src={logo} alt="Gorilla Armor Logo" className="h-10 w-auto" />
+      <span className="text-xl font-medium">Gorilla Armor Shop</span>
+    </Link>
+  </div>
+  <nav className="space-x-10">
+    <Link to="/" className="hover:text-gray-400 transition">Home</Link>
+    <Link to="/helms" className="hover:text-gray-400 transition">Helms</Link>
+    <Link to="/about" className="hover:text-gray-400 transition">About Us</Link>
+    <Link to="/contacts" className="hover:text-gray-400 transition">Contacts</Link>
+    <Link to="/faq" className="hover:text-gray-400 transition">FAQ</Link>
+  </nav>
 
-          {/* Right side of header */}
-          <IconBar />
-        </header>
+  {/* Right side of header */}
+  <IconBar />
+</header>
 
         {/* Page Content */}
         <div className="p-0">
@@ -74,48 +77,54 @@ function App() {
         </div>
 
         {/* Footer */}
-        <footer className="bg-head text-[#F3EEE8] p-12">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start">
-            {/* Logo Section */}
-           
+        <footer className="bg-head text-[#F3EEE8] p-16">
+  <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between">
+    {/* Logo Section */}
+    <div>
+      <img src={logo} alt="Gorilla Armor Logo" className="h-32 w-auto mb-4" />
+    </div>
 
-            {/* Useful Links */}
-            <div className="mb-6 md:mb-0 pr-20">
-    <h3 className="font-bold mb-2">Useful Links</h3>
-    <ul className="space-y-1 text-gray-400">
-      <li><a href="/about" className="hover:text-white transition">About Us</a></li>
-      <li><a href="/contacts" className="hover:text-white transition">Contacts</a></li>
-      <li><a href="/products" className="hover:text-white transition">Our Products</a></li>
-      <li><a href="/privacy-policy" className="hover:text-white transition">Privacy Policy</a></li>
-      <li><a href="/return-policy" className="hover:text-white transition">Return Policy</a></li>
-      <li><a href="/terms" className="hover:text-white transition">Terms & Conditions</a></li>
-      <li><a href="/shipping" className="hover:text-white transition">Shipping</a></li>
-    </ul>
+    {/* Links Container */}
+    <div className="flex flex-wrap gap-16">
+      {/* Useful Links */}
+      <div>
+        <h3 className="font-bold mb-2">Useful Links</h3>
+        <ul className="space-y-1 text-gray-400">
+          <li><a href="/about" className="hover:text-white transition">About Us</a></li>
+          <li><a href="/contacts" className="hover:text-white transition">Contacts</a></li>
+          <li><a href="/helms" className="hover:text-white transition">Our products</a></li>
+          <li><a href="/privacy-policy" className="hover:text-white transition">Privacy Policy</a></li>
+          <li><a href="/return-policy" className="hover:text-white transition">Return Policy</a></li>
+          <li><a href="/terms" className="hover:text-white transition">Terms & Conditions</a></li>
+          <li><a href="/shipping" className="hover:text-white transition">Shipping</a></li>
+        </ul>
+      </div>
+
+      {/* User Section */}
+      <div>
+        <h3 className="font-bold mb-2">User</h3>
+        <ul className="space-y-1 text-gray-400">
+          <li><a href="/account" className="hover:text-white transition">My account</a></li>
+          <li><a href="/orders" className="hover:text-white transition">My orders</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
 
-            {/* User Section */}
-            <div >
-              <h3 className="font-bold mb-2">User</h3>
-              <ul className="space-y-1 text-gray-400">
-                <li><a href="/account" className="hover:text-white transition">My Account</a></li>
-                <li><a href="/orders" className="hover:text-white transition">My Orders</a></li>
-              </ul>
-            </div>
-          </div>
+  {/* Copyright */}
+  <div className="text-center text-gray-500 mt-6">
+    © 2025 - Powered by Oblagon.
+  </div>
 
-          {/* Copyright */}
-          <div className="text-left text-gray-500 mt-6">
-            © 2025 - Powered by Oblagon.
-          </div>
+  {/* Scroll to Top Button */}
+  <button
+    className="fixed bottom-6 right-6 bg-gray-700 p-3 rounded-md text-white hover:bg-gray-600 transition"
+    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+  >
+    ↑
+  </button>
+</footer>
 
-          {/* Scroll to Top Button */}
-          <button 
-            className="fixed bottom-6 right-6 bg-gray-700 p-3 rounded-md text-white hover:bg-gray-600 transition"
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          >
-            ↑
-          </button>
-        </footer>
       </div>
     </Router>
   );

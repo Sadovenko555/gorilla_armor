@@ -1,4 +1,4 @@
-import { MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 const Contacts = () => {
   return (
@@ -6,19 +6,23 @@ const Contacts = () => {
       <section className="max-w-4xl mx-auto text-center md:text-left">
         <h1 className="text-4xl font-bold mb-6">Contact Us</h1>
         <p className="text-lg text-gray-400 mb-6">
-          Have questions? Reach out to us - we're here to help!
+          Have questions? Reach out to us - we аre here to help!
         </p>
 
         <div className="flex flex-col md:flex-row items-center md:items-start space-y-6 md:space-y-0 md:space-x-12">
           {/* Contact Info */}
           <div className="flex flex-col space-y-4">
             <div className="flex items-center space-x-3">
-              <MapPin className="w-6 h-6 text-red-500" />
+              <MapPin className="w-6 h-6 text-FC" />
               <span className="text-lg">Truskavets, Ukraine</span>
             </div>
             <div className="flex items-center space-x-3">
-              <Phone className="w-6 h-6 text-red-500" />
+              <Phone className="w-6 h-6 text-FC" />
               <span className="text-lg">+30976191692</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <Mail className="w-6 h-6 text-FC" />
+              <span className="text-lg">gorillaarmor@gmail.com</span>
             </div>
           </div>
 

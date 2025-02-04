@@ -32,6 +32,34 @@ const helms = [
     price: "1,000 €",
     image: card4,
   },
+  {
+    id: 1,
+    name: "Helmet",
+    colors: "Steel | Gold",
+    price: "2,000 €",
+    image:  card1,
+  },
+  {
+    id: 2,
+    name: "Helmet",
+    colors: "Black | Silver",
+    price: "5,500 €",
+    image: card2,
+  },
+  {
+    id: 3,
+    name: "Helmet",
+    colors: "Bronze | Silver",
+    price: "1,800 €",
+    image: card3,
+  },
+  {
+    id: 4,
+    name: "Helmet",
+    colors: "Red | Gold",
+    price: "1,000 €",
+    image: card4,
+  },
 ];
 const Helms = () => {
   return (
@@ -53,7 +81,7 @@ const Helms = () => {
             <p className="text-lg font-semibold mt-2">{helm.price}</p>
             <Link
               to={`/product/${helm.id}`}
-              className="block mt-4 text-center bg-red-800 hover:bg-blue-500 text-white py-2 rounded-md transition"
+              className="block mt-4 text-center bg-red-800 hover:bg-red-700 text-white py-2 rounded-md transition"
             >
               View Details
             </Link>
