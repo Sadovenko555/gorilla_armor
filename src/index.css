@@ -1,16 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
+@font-face {
+  font-family: "Wabroye";
+  src: url("/assets/fonts/wabroye.medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import "tailwindcss";
-@theme {
-  --color-midnight: #121063;
-  --color-tahiti: #3ab7bf;
-  --color-bermuda: #78dcca;
-}
 
 body {
   overflow-x: hidden;

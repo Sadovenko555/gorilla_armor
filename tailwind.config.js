@@ -4,15 +4,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        BG: '#1C1C1C', 
-        FC:  '#EBEBEB',
-        head:  '#2B2B2B', 
+        BG: "#1C1C1C",
+        FC: "#EBEBEB",
+        head: "#2B2B2B",
       },
       fontFamily: {
-        inter: ['Inter', 'sans-serif'],
-        sans: ["Open Sans", "sans-serif"], 
+        inter: ["Inter", "sans-serif"],
+        sans: ["Open Sans", "sans-serif"],
+        wabroye: ["Wabroye", "sans-serif"], // Добавляем кастомный шрифт
       },
     },
   },
   plugins: [],
-}
+};

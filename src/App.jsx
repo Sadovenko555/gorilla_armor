@@ -38,7 +38,7 @@ function App() {
             <Link to="/">
               <img src={logo} alt="Gorilla Armor Logo" className="h-10 w-auto" />
             </Link>
-            <span className="text-xl font-medium">Gorilla Armor Shop</span>
+            <span className="font-wabroye text-xl font-bold">Gorilla Armor Shop</span>
           </div>
           <nav className="hidden md:flex space-x-10">
             <Link to="/" className="hover:text-gray-400 transition">Home</Link>
