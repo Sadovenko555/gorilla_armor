@@ -21,7 +21,7 @@ const Product = () => {
 
   return (
     <div className="bg-BG text-FC min-h-screen p-10">
-      <div className="flex flex-col md:flex-row gap-10">
+      <div className="flex flex-col md:flex-row gap-10 max-w-5xl mx-auto">
         {/* Галерея изображений */}
         <div className="flex gap-4">
           <div className="flex flex-col gap-2">
@@ -30,85 +30,48 @@ const Product = () => {
                 key={index}
                 src={img.src}
                 alt={img.alt}
-                className="w-20 h-20 cursor-pointer border border-gray-600 rounded-md"
+                className="w-20 h-20 cursor-pointer border border-gray-600 rounded-md object-cover"
                 onClick={() => setSelectedImage(img.src)}
               />
             ))}
           </div>
-          <img src={selectedImage} alt="Helmet" className="w-96 h-auto rounded-lg border border-gray-600" />
+          <div className="w-80 h-80 border border-gray-600 rounded-lg overflow-hidden">
+            <img
+              src={selectedImage}
+              alt="Helmet"
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
 
         {/* Опции товара */}
         <div className="flex flex-col gap-4 w-full md:w-1/2">
           <h1 className="text-3xl font-bold">Medieval Helmet</h1>
-          <p className="text-gray-400">
-            Crafted with the highest quality steel, our medieval helmets offer both authenticity and protection.
+          <p className="text-gray-400 text-sm leading-relaxed">
+            Bascinet type helmet with the houndskull (dog-faced form) visor...
           </p>
 
           {/* Выборы параметров */}
-          <div className="flex flex-col gap-2">
-            <label className="text-lg">Size</label>
-            <select
-              className="bg-head text-white p-2 rounded-md"
-              value={size}
-              onChange={(e) => setSize(e.target.value)}
-            >
-              <option value="S">S</option>
-              <option value="M">M</option>
-              <option value="L">L</option>
-              <option value="XL">XL</option>
-            </select>
-          </div>
-
-          <div className="flex flex-col gap-2">
-            <label className="text-lg">Metal Type</label>
-            <select
-              className="bg-head text-white p-2 rounded-md"
-              value={metalType}
-              onChange={(e) => setMetalType(e.target.value)}
-            >
-              <option value="raw">Raw Steel</option>
-              <option value="tempered">Tempered Steel</option>
-              <option value="stainless">Stainless Steel</option>
-            </select>
-          </div>
-
-          <div className="flex flex-col gap-2">
-            <label className="text-lg">Steel Thickness</label>
-            <select
-              className="bg-head text-white p-2 rounded-md"
-              value={thickness}
-              onChange={(e) => setThickness(e.target.value)}
-            >
-              <option value="2.0mm">2.0mm</option>
-              <option value="2.5mm">2.5mm</option>
-              <option value="3.0mm">3.0mm</option>
-            </select>
-          </div>
-
-          <div className="flex flex-col gap-2">
-            <label className="text-lg">Padded Liner</label>
-            <select
-              className="bg-head text-white p-2 rounded-md"
-              value={padded}
-              onChange={(e) => setPadded(e.target.value)}
-            >
-              <option value="no">Without Padding</option>
-              <option value="yes">With Padding</option>
-            </select>
-          </div>
-
-          <div className="flex flex-col gap-2">
-            <label className="text-lg">Aventail</label>
-            <select
-              className="bg-head text-white p-2 rounded-md"
-              value={aventail}
-              onChange={(e) => setAventail(e.target.value)}
-            >
-              <option value="no">Without Aventail</option>
-              <option value="yes">With Aventail</option>
-            </select>
-          </div>
+          {[
+            { label: "Size", value: size, setValue: setSize, options: ["S", "M", "L", "XL"] },
+            { label: "Metal Type", value: metalType, setValue: setMetalType, options: ["Raw Steel", "Tempered Steel", "Stainless Steel"] },
+            { label: "Steel Thickness", value: thickness, setValue: setThickness, options: ["2.0mm", "2.5mm", "3.0mm"] },
+            { label: "Padded Liner", value: padded, setValue: setPadded, options: ["Without Padding", "With Padding"] },
+            { label: "Aventail", value: aventail, setValue: setAventail, options: ["Without Aventail", "With Aventail"] },
+          ].map((item, index) => (
+            <div key={index} className="flex flex-col gap-2">
+              <label className="text-lg">{item.label}</label>
+              <select
+                className="bg-head text-white p-2 rounded-md w-40"
+                value={item.value}
+                onChange={(e) => item.setValue(e.target.value)}
+              >
+                {item.options.map((opt, i) => (
+                  <option key={i} value={opt.toLowerCase()}>{opt}</option>
+                ))}
+              </select>
+            </div>
+          ))}
 
           {/* Кнопка добавить в корзину */}
           <button className="bg-red-800 hover:bg-red-700 text-white px-6 py-3 rounded-lg text-lg font-bold">
