@@ -3,6 +3,15 @@ import helm1 from "/assets/helm1.jpg";
 import helm2 from "/assets/helm2.jpg";
 import helm3 from "/assets/helm3.jpg";
 import helm4 from "/assets/helm4.jpg";
+const basePrice = 200;
+
+const priceModifiers = {
+  size: { S: 0, M: 20, L: 40, XL: 60 },
+  metalType: { raw: 0, tempered: 50, stainless: 80 },
+  thickness: { "2.0mm": 0, "2.5mm": 30, "3.0mm": 60 },
+  padded: { no: 0, yes: 40 },
+  aventail: { no: 0, yes: 70 },
+};
 
 const Product = () => {
   const images = [
@@ -18,6 +27,27 @@ const Product = () => {
   const [thickness, setThickness] = useState("2.0mm");
   const [padded, setPadded] = useState("no");
   const [aventail, setAventail] = useState("no");
+
+   // Базовая цена
+   const basePrice = 200;
+   const priceModifiers = {
+     size: { S: 0, M: 10, L: 20, XL: 30 },
+     metalType: { raw: 0, tempered: 40, stainless: 60 },
+     thickness: { "2.0mm": 0, "2.5mm": 20, "3.0mm": 40 },
+     padded: { no: 0, yes: 15 },
+     aventail: { no: 0, yes: 25 },
+   };
+ 
+   const calculatePrice = () => {
+     return (
+       basePrice +
+       priceModifiers.size[size] +
+       priceModifiers.metalType[metalType] +
+       priceModifiers.thickness[thickness] +
+       priceModifiers.padded[padded] +
+       priceModifiers.aventail[aventail]
+     );
+   };
 
   return (
     <div className="bg-BG text-FC min-h-screen p-4 md:p-10">
@@ -55,6 +85,9 @@ const Product = () => {
             This method was developed in Germany around c.1360-1370. The apex point of the conical skull is slightly moved back. 
             Such Houndskull Bascinets were the most spread helmets used by knights in Europe in c.1380-1420. The finest examples of this type of helmet can be found in the armor collection of the Churburg castle and Royal Armories.
           </p>
+
+           {/* Цена */}
+           <div className="text-2xl font-bold text-red-500">Price: ${calculatePrice()}</div>
 
           {/* Выбор параметров */}
           <div className="flex flex-col gap-2">

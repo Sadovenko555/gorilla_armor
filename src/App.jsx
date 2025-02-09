@@ -13,6 +13,7 @@ import Checkout from "./pages/Checkout";
 import OrderConfirmation from "./pages/OrderConfirmation";
 import logo from "/assets/logo1.png";
 
+
 const IconBar = () => {
   return (
     <div className="flex space-x-4">
