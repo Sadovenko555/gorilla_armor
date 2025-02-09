@@ -3,15 +3,9 @@ import helm1 from "/assets/helm1.jpg";
 import helm2 from "/assets/helm2.jpg";
 import helm3 from "/assets/helm3.jpg";
 import helm4 from "/assets/helm4.jpg";
-const basePrice = 200;
 
-const priceModifiers = {
-  size: { S: 0, M: 20, L: 40, XL: 60 },
-  metalType: { raw: 0, tempered: 50, stainless: 80 },
-  thickness: { "2.0mm": 0, "2.5mm": 30, "3.0mm": 60 },
-  padded: { no: 0, yes: 40 },
-  aventail: { no: 0, yes: 70 },
-};
+
+
 
 const Product = () => {
   const images = [
