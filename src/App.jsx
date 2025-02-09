@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import { Search, User, ShoppingBag, Menu } from "lucide-react";
+import { Search, User, ShoppingBag, Menu, X } from "lucide-react";
 import { useState } from "react";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -18,10 +18,10 @@ const IconBar = () => {
     <div className="flex space-x-4">
       <Search className="text-FC w-5 h-5 hover:text-gray-400 transition hidden md:block" />
       <Link to="/account" className="hidden md:block">
-        <User className="text-FC w-5 h-5 hover:text-gray-400 transition" />
+        <User className="text-FC w-5 h-5 hover:text-gray-400 transition hidden md:block" />
       </Link>
       <Link to="/cart">
-        <ShoppingBag className="text-FC w-5 h-5 hover:text-gray-400 transition" />
+        <ShoppingBag className="text-FC w-5 h-5 hover:text-gray-400 transition hidden md:block" />
       </Link>
     </div>
   );
@@ -49,18 +49,27 @@ function App() {
           </nav>
           <IconBar />
           <button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
-            <Menu className="text-FC w-6 h-6" />
+            {menuOpen ? <X className="text-FC w-8 h-8" /> : <Menu className="text-FC w-12 h-12" />}
           </button>
         </header>
-        {menuOpen && (
-          <nav className="flex flex-col bg-head text-FC p-4 md:hidden">
-            <Link to="/" className="hover:text-gray-400 transition py-2">Home</Link>
-            <Link to="/helmets" className="hover:text-gray-400 transition py-2">Helmets</Link>
-            <Link to="/about" className="hover:text-gray-400 transition py-2">About Us</Link>
-            <Link to="/contacts" className="hover:text-gray-400 transition py-2">Contacts</Link>
-            <Link to="/faq" className="hover:text-gray-400 transition py-2">FAQ</Link>
-          </nav>
-        )}
+
+        {/* Мобильное меню */}
+        <div className={`fixed inset-0 bg-black bg-opacity-60 z-40 transition-opacity ${menuOpen ? "opacity-100 visible" : "opacity-0 invisible"}`} 
+    onClick={() => setMenuOpen(false)}></div>
+
+<nav className={`fixed top-0 right-0 h-full bg-head text-FC p-6 w-64 shadow-md transform transition-transform z-50 ${menuOpen ? "translate-x-0" : "translate-x-full"}`}>
+  <button className="absolute top-4 right-4 text-FC" onClick={() => setMenuOpen(false)}>
+    <X className="w-6 h-6" />
+  </button>
+  <ul className="flex flex-col items-center space-y-6 mt-10 text-xl">
+    <li><Link to="/" onClick={() => setMenuOpen(false)} className="hover:text-gray-400 transition">Home</Link></li>
+    <li><Link to="/helmets" onClick={() => setMenuOpen(false)} className="hover:text-gray-400 transition">Helmets</Link></li>
+    <li><Link to="/about" onClick={() => setMenuOpen(false)} className="hover:text-gray-400 transition">About Us</Link></li>
+    <li><Link to="/contacts" onClick={() => setMenuOpen(false)} className="hover:text-gray-400 transition">Contacts</Link></li>
+    <li><Link to="/faq" onClick={() => setMenuOpen(false)} className="hover:text-gray-400 transition">FAQ</Link></li>
+  </ul>
+</nav>
+
 
         <div className="p-0">
           <Routes>
@@ -80,7 +89,7 @@ function App() {
         <footer className="bg-head text-[#F3EEE8] p-16">
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between">
             <div>
-              <img src={logo} alt="Gorilla Armor Logo" className="h-32 w-auto mb-4" />
+              
             </div>
             <div className="flex flex-wrap gap-16">
               <div>
