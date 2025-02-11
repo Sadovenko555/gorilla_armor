@@ -58,19 +58,26 @@ function App() {
         <div className={`fixed inset-0 bg-black bg-opacity-60 z-40 transition-opacity ${menuOpen ? "opacity-100 visible" : "opacity-0 invisible"}`} 
     onClick={() => setMenuOpen(false)}></div>
 
-<nav className={`fixed top-0 right-0 h-full bg-head text-FC p-6 w-64 shadow-md transform transition-transform z-50 ${menuOpen ? "translate-x-0" : "translate-x-full"}`}>
-  <button className="absolute top-4 right-4 text-FC" onClick={() => setMenuOpen(false)}>
-    <X className="w-6 h-6" />
-  </button>
-  <ul className="flex flex-col items-center space-y-6 mt-10 text-xl">
-    <li><Link to="/" onClick={() => setMenuOpen(false)} className="hover:text-gray-400 transition">Home</Link></li>
-    <li><Link to="/helmets" onClick={() => setMenuOpen(false)} className="hover:text-gray-400 transition">Helmets</Link></li>
-    <li><Link to="/about" onClick={() => setMenuOpen(false)} className="hover:text-gray-400 transition">About Us</Link></li>
-    <li><Link to="/contacts" onClick={() => setMenuOpen(false)} className="hover:text-gray-400 transition">Contacts</Link></li>
-    <li><Link to="/faq" onClick={() => setMenuOpen(false)} className="hover:text-gray-400 transition">FAQ</Link></li>
-  </ul>
-</nav>
-
+        <nav className={`fixed top-0 right-0 h-full bg-head text-FC p-6 w-64 shadow-md transform transition-transform z-50 ${menuOpen ? "translate-x-0" : "translate-x-full"}`}>
+          <button className="absolute top-4 right-4 text-FC" onClick={() => setMenuOpen(false)}>
+            <X className="w-6 h-6" />
+          </button>
+          <ul className="flex flex-col items-center space-y-6 mt-10 text-xl">
+            <li><Link to="/" onClick={() => setMenuOpen(false)} className="hover:text-gray-400 transition">Home</Link></li>
+            <li><Link to="/helmets" onClick={() => setMenuOpen(false)} className="hover:text-gray-400 transition">Helmets</Link></li>
+            <li><Link to="/about" onClick={() => setMenuOpen(false)} className="hover:text-gray-400 transition">About Us</Link></li>
+            <li><Link to="/contacts" onClick={() => setMenuOpen(false)} className="hover:text-gray-400 transition">Contacts</Link></li>
+            <li><Link to="/faq" onClick={() => setMenuOpen(false)} className="hover:text-gray-400 transition">FAQ</Link></li>
+          </ul>
+          <div className="flex justify-center space-x-6 mt-6">
+            <Link to="/account" onClick={() => setMenuOpen(false)}>
+              <User className="text-FC w-6 h-6 hover:text-gray-400 transition" />
+            </Link>
+            <Link to="/cart" onClick={() => setMenuOpen(false)}>
+              <ShoppingBag className="text-FC w-6 h-6 hover:text-gray-400 transition" />
+            </Link>
+          </div>
+        </nav>
 
         <div className="p-0">
           <Routes>
