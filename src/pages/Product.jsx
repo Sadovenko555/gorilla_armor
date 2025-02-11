@@ -23,9 +23,9 @@ const Product = () => {
   const [aventail, setAventail] = useState("no");
 
    // Базовая цена
-   const basePrice = 200;
+   const basePrice = 2000;
    const priceModifiers = {
-     size: { S: 0, M: 10, L: 20, XL: 30 },
+     size: { S: 0, M: 100, L: 200, XL: 300 },
      metalType: { raw: 0, tempered: 40, stainless: 60 },
      thickness: { "2.0mm": 0, "2.5mm": 20, "3.0mm": 40 },
      padded: { no: 0, yes: 15 },
