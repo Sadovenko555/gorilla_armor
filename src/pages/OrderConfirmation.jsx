@@ -12,7 +12,7 @@ const OrderConfirmation = () => {
         </p>
         <Link
           to="/"
-          className="bg-btn text-FC px-6 py-3 rounded-lg hover:bg-opacity-80 transition shadow-md"
+          className="bg-red-800 text-FC px-6 py-3 rounded-lg hover:bg-red-700 transition shadow-md"
         >
           Return to Home
         </Link>

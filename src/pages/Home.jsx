@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import HelmetsCarousel from "../components/HelmetsCarousel";
-import herofoto from "/dist/assets/hero-image.jpg";
+import herofoto from "/dist/assets/hero-image4.jpg";
 import { Truck, ShieldCheck, Headphones } from "lucide-react";
 
 const Home = () => {
@@ -23,12 +23,12 @@ const Home = () => {
           </Link>
         </div>
         <div className="w-full md:w-2/5 mt-6 md:mt-0 flex justify-center">
-          <img
-            src={herofoto}
-            alt="Armor"
-            className="rounded-lg w-[300px] h-[300px] md:w-[400px] md:h-[400px] object-cover"
-          />
-        </div>
+  <img
+    src={herofoto}
+    alt="Armor"
+    className="rounded-lg max-w-full h-auto object-contain"
+  />
+</div>
       </section>
 
       {/* Benefits Section */}
