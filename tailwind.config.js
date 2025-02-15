@@ -7,6 +7,7 @@ export default {
         BG: "#1C1C1C",
         FC: "#EBEBEB",
         head: "#2B2B2B",
+        head2: "#130F0C",
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],

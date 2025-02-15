@@ -34,7 +34,7 @@ function App() {
   return (
     <Router basename="/gorilla_armor">
       <div className="px-0">
-        <header className="flex justify-between items-center p-4 pl-10 pr-10 bg-head shadow-md text-FC">
+        <header className="flex justify-between items-center p-4 pl-10 pr-10 bg-zinc-950 shadow-md text-FC">
           <div className="flex items-center gap-4">
             <Link to="/">
               <img src={logo} alt="Gorilla Armor Logo" className="h-10 w-auto" />
